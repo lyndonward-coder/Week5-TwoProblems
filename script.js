@@ -16,7 +16,7 @@ function prime_position(int){
             }
             if(prime >= 2){
                 break;
-//if two or more factors its a prime
+//if two or more factors it's not a prime
             }
         }
         if(prime <= 1){
