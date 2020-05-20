@@ -9,17 +9,17 @@ function prime_position(int){
     if(num < 2){
         prime = 2;
     }
-    for(var i = 2; i <= num; i++){
+    for(var i = 2; i <= Math.sqrt(num); i++){
             if(num % i == 0){
                 prime++;
 //count number of factors
             }
-            if(prime >= 2){
+            if(prime >= 1){
                 break;
 //if two or more factors it's not a prime
             }
         }
-        if(prime <= 1){
+        if(prime <= 0){
             arr.push(num);
 //if a prime add to array
         }
