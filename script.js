@@ -1,13 +1,42 @@
 function prime_position(int){
-//create an array with prime values up to 19
-var arr = [2,3,5,7,11,13,17,19];
-//if the prime wanted is greater than the value of 8th prime return coming
-    if(int > 8){
-    return 'coming';
+    var arr = [];
+    var num = 0;
+    var prime = 0;
+//Intialize varibles
+   while(arr.length < int){
+    num++;    
+//Check for primes
+    if(num < 2){
+        prime = 2;
+    }
+    for(var i = 2; i <= num; i++){
+            if(num % i == 0){
+                prime++;
+//count number of factors
+            }
+            if(prime >= 2){
+                break;
+//if two or more factors its a prime
+            }
+        }
+        if(prime <= 1){
+            arr.push(num);
+//if a prime add to array
+        }
+        prime = 0;
+//reset number of factors
+   }
+//return prime number 
+   return arr[int-1];
 }
-//Give the value of the prime
-return arr[int -1 ];
-}
+
+
+
+
+     
+
+
+
 
 function sort_subtract(int){
 str = String(int);
@@ -21,7 +50,7 @@ for( i = 1; i<str.length+1; i ++){
 }
 //create an array with each digit of the integer as a value
 arr.sort((a,b) => a-b);
-//sort the area by ascneding value (lowest to highest)
+//sort the array by ascneding value (lowest to highest)
 for( q = 0; q<arr.length; q++){
     strx += arr[q];
 }
